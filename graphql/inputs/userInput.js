@@ -1,7 +1,6 @@
 const {
     GraphQLString,
     GraphQLInputObjectType,
-    GraphQLInt,
     
 } = require('graphql')
 
@@ -10,9 +9,9 @@ module.exports = new GraphQLInputObjectType({
     fields: () => {
         return {
             id: { type: GraphQLString },
-            username: { GraphQLString },
-            email: { GraphQLString },
-            password: { GraphQLString },
+            username: { type: GraphQLString },
+            email: { type: GraphQLString },
+            password: { type: GraphQLString },
         }
     }
 })

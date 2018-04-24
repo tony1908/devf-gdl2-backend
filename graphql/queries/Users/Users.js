@@ -3,7 +3,7 @@ const {
 } = require("graphql")
 
 const User = require("../../types/User")
-const { UsersDB } = require("../../../database/models")
+const { Users } = require("../../../database/models")
 
 module.exports = {
     type : new GraphQLList(User),
@@ -11,7 +11,15 @@ module.exports = {
 
     },
     resolve(root,args){
-        
+        const getUsers = async () => {
+            return await Users.find();
+        }
+
+        const queryUsers = async () => {
+            return await getUsers();
+        }
+
+        return queryUsers()
     }
 }
 
