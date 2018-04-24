@@ -1,0 +1,26 @@
+{
+  "name": "proyecto_curso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "index": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichbinedgar/proyecto_curso.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ichbinedgar/proyecto_curso/issues"
+  },
+  "homepage": "https://github.com/ichbinedgar/proyecto_curso#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "mongoose": "^5.0.15"
+  }
+}
