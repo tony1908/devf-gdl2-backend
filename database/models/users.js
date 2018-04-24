@@ -1,3 +1,5 @@
+ const mongoose = require("mongoose")
+ 
  const UsersDB = mongoose.model("User", {
     username: String,
     password: String,

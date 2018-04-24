@@ -1,12 +1,12 @@
 const User = require("../../types/User")
-const userInput = require("../../inputs/")
+const userInput = require("../../inputs/userInput")
 const { UsersDB  } = require("../../../database/models")
 
 module.exports = {
-    type: UserInput,
+    type: User,
     args: {
         user: {
-            type: UserInput
+            type: userInput
         }
     },
     resolve(root, args){
