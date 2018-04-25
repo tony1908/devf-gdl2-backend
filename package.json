@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/ichbinedgar/proyecto_curso/issues"
   },
-  "script": {
+  "scripts": {
     "start": "node index"
   },
   "homepage": "https://github.com/ichbinedgar/proyecto_curso#readme",
