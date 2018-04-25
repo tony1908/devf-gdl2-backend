@@ -5,14 +5,10 @@ const {
 } = require('graphql')
 
 module.exports = new GraphQLInputObjectType({
-    name: 'userInput',
+    name: 'emailInput',
     fields: () => {
         return {
-            id: { type: GraphQLString },
-            username: { type: GraphQLString },
             email: { type: GraphQLString },
-            password: { type: GraphQLString },
-            reset_token: { type: GraphQLString },
         }
     }
 })
