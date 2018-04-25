@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/ichbinedgar/proyecto_curso/issues"
   },
+  "script": {
+    "start": "node index"
+  },
   "homepage": "https://github.com/ichbinedgar/proyecto_curso#readme",
   "dependencies": {
     "dotenv": "^5.0.1",
