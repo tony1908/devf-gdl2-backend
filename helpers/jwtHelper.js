@@ -78,7 +78,7 @@ function tokenVerify(token){
 
 }
 
-// USE THIS LINES IN CASE YOU NEED TO SEE WHAT IS PASSING TO ENCODE AND DECODE
+// USE THIS LINES IN CASE YOU NEED TO SEE WHAT IS PASSING TO ENCODE AND DECODE comment
 // console.log(process.env.SECRET_KEY);
 // console.log("Now lets encode: ----------------------------");
 // encoded = tokenEncode("claudio");
@@ -99,3 +99,4 @@ function tokenVerify(token){
 //     console.log("User iat: ", verified.iat);
 //     console.log("User exp: ", verified.exp);
 // }
+
