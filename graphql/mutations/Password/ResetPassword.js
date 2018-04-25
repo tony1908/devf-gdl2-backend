@@ -31,11 +31,13 @@ module.exports = {
             );
 
             user.reset_token = token;
-            const save_result = await user.save()
+            const saveResult = await user.save()
+
+            const emailTo = process.env.ENV === 'development' ? process.env.EMAIL_TEST : plainUserObject.email;
 
             sendmail({
                 from: 'no-reply@netflix-copy.com',
-                to: process.env.ENV === 'development' ? process.env.EMAIL_TEST : plainUserObject.email,
+                to: emailTo,
                 subject: 'Reset password email',
                 html: `<html><body><div>
                     <a title="Reset password link" href="http://${process.env.HOSTNAME}:${process.env.PORT}/?token=${token}">Reset password</a>
