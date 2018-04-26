@@ -1,6 +1,6 @@
-var util = require('util');
+const util = require('util');
 // import { isUndefined, isNullOrUndefined } from 'util';
-var jwt = require('jsonwebtoken'); // Import jsonwebtoken
+const jwt = require('jsonwebtoken'); // Import jsonwebtoken
 require('dotenv').config({path: "../.env"}) // Load dotenv library with the .env file on the root folder of the project
 
 function tokenEncode(username) {
