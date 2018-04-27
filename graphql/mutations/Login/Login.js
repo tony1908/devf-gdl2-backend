@@ -1,6 +1,7 @@
 const User = require("../../types/User")
 const userLogin = require("../../inputs/userLogin")
 const { Users  } = require("../../../database/models")
+const bcrypt = require("bcrypt")
 
 module.exports = {
     type: User,
@@ -13,12 +14,10 @@ module.exports = {
         const loginUser = async (args) => {
             
             const user = await Users.findOne({email: args.login.email})
-
-            if (user.password == args.login.password){
-                console.log("Valid password")
+ 
+            if (bcrypt.compareSync(args.login.password, user.password)){
                 return user;
-            }else{
-                console.log("Invalid password");
+            } else {
                 return new Error("Invalid password")
             }
         }
