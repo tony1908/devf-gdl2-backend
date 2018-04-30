@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/ichbinedgar/proyecto_curso#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.2",
-    "mongoose": "^5.0.16"
+    "jsonwebtoken": "^8.2.1",
+    "mongoose": "^5.0.16",
+    "util": "^0.10.3"
   }
 }
