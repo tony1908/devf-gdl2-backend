@@ -1,6 +1,6 @@
 const User = require("../../types/User")
 const userInput = require("../../inputs/userInput")
-const { UsersDB  } = require("../../../database/models")
+const { Users  } = require("../../../database/models")
 
 module.exports = {
     type: User,
@@ -11,9 +11,10 @@ module.exports = {
     },
     resolve(root, args){
         const saveUser = async (args) => {
-            const user = new UsersDB({ ...args.user })
+
+            const user = new Users({ ...args.user })
             const result = await user.save()
-            console.log(result)
+
             return result            
         }
 
