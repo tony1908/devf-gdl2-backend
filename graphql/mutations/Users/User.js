@@ -1,6 +1,7 @@
 const User = require("../../types/User")
 const userInput = require("../../inputs/userInput")
 const { Users  } = require("../../../database/models")
+const bcrypt = require("bcrypt")
 
 module.exports = {
     type: User,
@@ -11,11 +12,17 @@ module.exports = {
     },
     resolve(root, args){
         const saveUser = async (args) => {
+            const user = new Users({ ...args.user });
 
-            const user = new Users({ ...args.user })
-            const result = await user.save()
+            bcrypt.hash(user.password, 10, function(err, hash){
+                if (err) {
+                    return next(err);
+                }
+                user.password = hash;
 
-            return result            
+                const result = user.save()
+                return result
+            })
         }
 
         return saveUser(args)
